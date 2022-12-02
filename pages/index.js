@@ -1,8 +1,15 @@
+import axios from "axios"
 
 export default function Home() {
+  
+  function handleSubmit() {
+    axios.get("/api/hello").then(res => console.log(res))
+  }
+  
+  
   return (
     <>
-      <h1>askdkaskda</h1>
+      <button onClick={handleSubmit}>askdkaskda</button>
     </>
   )
 }
